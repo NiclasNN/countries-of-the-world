@@ -1,0 +1,16 @@
+.navbar {
+    width: 90%; /* Ta upp hela bredden på skärmen */
+    height: 60px; /* Justera höjden efter behov */
+    background-color: #F2F2F2; /* Använd den mörkblå färgen från stilguiden */
+    color: #F2F2F2; /* Vit textfärg för kontrast */
+    display: flex; /* Flexbox för att centrera innehållet vertikalt */
+    align-items: center; /* Centrera innehållet vertikalt */
+    padding: 0 20px 0 20px;
+    margin:auto; /* Lägg till lite sidomarginal */
+  }
+
+
+  .navbar-logo {
+    margin: auto;
+    justify-content: center; /* Centrera bilden horisontellt */
+  }
