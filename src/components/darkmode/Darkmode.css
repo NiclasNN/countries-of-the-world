@@ -1,0 +1,18 @@
+
+.darkmode-button {
+  /* Bakgrundsfärg för knappen i dark mode */
+   /* Textfärg för knappen i dark mode */
+  /* Justera knappens padding efter behov */
+  border: none; /* Ta bort knappens ram */
+   /* Avrunda knappens hörn */
+  cursor: pointer; /* Visa en pekare när användaren hovrar över knappen */
+ /* Göra övergångseffekter mjukare */
+}
+
+
+
+/* Dark Mode */
+/* Ljus textfärg när i dark mode */
+.text-color-light {
+  color: #ffffff;
+}
