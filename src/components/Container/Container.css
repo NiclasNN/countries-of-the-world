@@ -1,0 +1,18 @@
+.country-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f2f2f2; /* Bakgrundsfärg */
+  }
+  
+  .country-item {
+    background-color: #ffffff; /* Bakgrundsfärg för land-items */
+    border: 1px solid #ccc; /* Ram för land-items */
+    border-radius: 8px; /* Rundade hörn */
+    padding: 20px; /* Inre marginal */
+    margin: 10px; /* Yttre marginal */
+    width: 200px; /* Bredd på land-items */
+    text-align: center; /* Centrera texten */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skugga */
+  }

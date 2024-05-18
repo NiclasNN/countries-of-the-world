@@ -1,34 +1,35 @@
 .navbar {
-    width: 90%; /* Ta upp hela bredden på skärmen */
-    height: 60px; /* Justera höjden efter behov */
-    background-color: #F2F2F2; /* Använd den mörkblå färgen från stilguiden */
-    color: #F2F2F2; /* Vit textfärg för kontrast */
-    display: flex; /* Flexbox för att centrera innehållet vertikalt */
-   justify-content: space-between; /* Centrera innehållet vertikalt */
-    padding: 0 20px 0 20px;
-    margin:auto; /* Lägg till lite sidomarginal */
-    
-  }
-
-
-  .navbar-logo {
-    margin: auto;
-    justify-content: center; /* Centrera bilden horisontellt */
-  }
-
-  .navbar-left {
-    margin-right: auto;
-    color: #202C36; 
-    font-size: 25px;/* Flyttar texten till vänster */
-  }
-
-
-  .dark-mode .darkmode-button {
-    color: #ffffff;
-  }
+  width: 100%; /* Ta upp hela bredden på skärmen */
+  height: 60px; /* Justera höjden efter behov */
+  background-color: 	#FFFFFF; /* Använd den mörkblå färgen från stilguiden */
+  color: #F2F2F2; /* Vit textfärg för kontrast */
+  display: flex; /* Flexbox för att centrera innehållet vertikalt */
+ justify-content: space-between; /* Centrera innehållet vertikalt */
+  padding: 0 20px 0 20px;
+  margin:auto; /* Lägg till lite sidomarginal */
   
-  /* Light Mode är aktiverat */
-  .light-mode .darkmode-button {
-    background-color: #ffffff;
-    color: #1a1a1a;
-  }
+}
+
+
+.navbar-logo {
+  margin: auto;
+  justify-content: center;
+  align-items: center; /* Centrera bilden horisontellt */
+}
+
+.navbar-left {
+  margin-right: auto;
+  color: #202C36; 
+  font-size: 25px;/* Flyttar texten till vänster */
+}
+
+
+.dark-mode .darkmode-button {
+  color: #ffffff;
+}
+
+/* Light Mode är aktiverat */
+.light-mode .darkmode-button {
+  background-color: #ffffff;
+  color: #1a1a1a;
+}
