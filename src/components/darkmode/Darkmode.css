@@ -1,18 +1,40 @@
+:root {
+  --dark-blue: #2B3844;
+  --darker-blue: #202C36;
+  --white: #F2F2F2;
+}
+
+.darkmode-container {
+  display: flex;
+  align-items: center;
+}
 
 .darkmode-button {
-  /* Bakgrundsfärg för knappen i dark mode */
-   /* Textfärg för knappen i dark mode */
-  /* Justera knappens padding efter behov */
-  border: none; /* Ta bort knappens ram */
-   /* Avrunda knappens hörn */
-  cursor: pointer; /* Visa en pekare när användaren hovrar över knappen */
- /* Göra övergångseffekter mjukare */
+  display: flex;
+  align-items: center;
+  background-color: var(--white);
+  border: none;
+  color: var(--dark-blue);
+  font-size: 16px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
 
 
-/* Dark Mode */
-/* Ljus textfärg när i dark mode */
-.text-color-light {
-  color: #ffffff;
+.darkmode-icon {
+  margin-right: 8px;
+  font-size: 20px;
+  color: inherit;
+}
+
+.darkmode-button.dark {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.darkmode-button.dark:hover {
+  background-color: var(--darker-blue);
 }

@@ -1,18 +1,100 @@
-.country-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-    background-color: #f2f2f2; /* Bakgrundsfärg */
-  }
-  
-  .country-item {
-    background-color: #ffffff; /* Bakgrundsfärg för land-items */
-    border: 1px solid #ccc; /* Ram för land-items */
-    border-radius: 8px; /* Rundade hörn */
-    padding: 20px; /* Inre marginal */
-    margin: 10px; /* Yttre marginal */
-    width: 200px; /* Bredd på land-items */
-    text-align: center; /* Centrera texten */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Skugga */
-  }
+:root {
+  --input-bg: #fff;
+  --input-border: #ccc;
+  --input-text: #333;
+  --input-placeholder: #888;
+  --input-focus-border: #007BFF;
+  --select-bg: #fff;
+  --select-border: #ccc;
+  --select-text: #333;
+  --select-focus-border: #007BFF;
+}
+
+.container .controls .search-input {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--input-text);
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+  width: 250px; /* Justera bredden här */
+}
+
+.container .controls .search-input::placeholder {
+  color: var(--input-placeholder);
+}
+
+.container .controls .search-input:focus {
+  border-color: var(--input-focus-border);
+  outline: none;
+}
+
+.container .controls .region-select {
+  background-color: var(--select-bg);
+  border: 1px solid var(--select-border);
+  color: var(--select-text);
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+  width: 250px; /* Justera bredden här om nödvändigt */
+}
+
+.container .controls .region-select:focus {
+  border-color: var(--select-focus-border);
+  outline: none;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.controls {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 1200px;
+  justify-content: space-between;
+/* Lägg till detta för att centrera kontrollerna */
+}
+
+.countries-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.country-card {
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 20px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.country-card img {
+  width: 100%;
+  height: auto;
+}
+
+.country-card h3 {
+  margin: 10px 0;
+}
+
+.country-card p {
+  margin: 5px 0;
+}
+
+.country-card:hover {
+  transform: translateY(-10px);
+}
