@@ -15,6 +15,11 @@
   margin-right: 5px;
 }
 
+.darkmode-button::before {
+  content: url('/moon-bordered.svg'); /* Lägger till ikonen före texten */
+  width: 24px;
+  height: 30px;
+}
 .darkmode-button:hover {
   background-color: var(--navbar-text-color);
   color: var(--navbar-bg);

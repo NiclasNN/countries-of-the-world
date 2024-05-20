@@ -15,6 +15,8 @@
   --dark-mode-bg: #202c36;
   --dark-mode-text: #ffffff;
   --dark-mode-navbar-bg: #333333;
+  
+
 }
 
 body {
@@ -131,4 +133,13 @@ body.dark-mode .country-card {
 body.dark-mode .search-input::placeholder,
 body.dark-mode .region-select::placeholder {
   color: var(--dark-mode-text);
+}
+
+
+.navbar-logo {
+  transition: filter 0.3s;
+}
+
+body.dark-mode .navbar-logo {
+  filter: invert(1);
 }
