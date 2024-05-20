@@ -1,22 +1,19 @@
-import React, { useState } from 'react';
-import './Darkmode.css';
-import { FaMoon } from 'react-icons/fa'; // Lägg till react-icons för ikoner
+import React from 'react';
+import './Darkmode.css'; // Importera stilmallen för Darkmode
 
-const Darkmode = () => {
-  const [darkMode, setDarkMode] = useState(false);
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    // Lägg till logik här för att aktivera dark mode i hela appen senare
-  };
-
+const Darkmode = ({ toggleDarkMode, darkMode }) => {
   return (
-    <div className="darkmode-container">
-      <button onClick={toggleDarkMode} className={`darkmode-button ${darkMode ? 'dark' : ''}`}>
-        <FaMoon className="darkmode-icon" />
-        <span>Dark Mode</span>
-      </button>
-    </div>
+    <button className="darkmode-button" onClick={toggleDarkMode}>
+      {darkMode ? (
+        <>
+          <i className="fas fa-sun"></i> Light Mode
+        </>
+      ) : (
+        <>
+          <i className="fas fa-moon"></i> Dark Mode
+        </>
+      )}
+    </button>
   );
 };
 

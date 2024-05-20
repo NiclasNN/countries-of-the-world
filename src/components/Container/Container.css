@@ -10,42 +10,6 @@
   --select-focus-border: #007BFF;
 }
 
-.container .controls .search-input {
-  background-color: var(--input-bg);
-  border: 1px solid var(--input-border);
-  color: var(--input-text);
-  border-radius: 4px;
-  padding: 10px;
-  font-size: 16px;
-  transition: border-color 0.2s;
-  width: 250px; /* Justera bredden här */
-}
-
-.container .controls .search-input::placeholder {
-  color: var(--input-placeholder);
-}
-
-.container .controls .search-input:focus {
-  border-color: var(--input-focus-border);
-  outline: none;
-}
-
-.container .controls .region-select {
-  background-color: var(--select-bg);
-  border: 1px solid var(--select-border);
-  color: var(--select-text);
-  border-radius: 4px;
-  padding: 10px;
-  font-size: 16px;
-  transition: border-color 0.2s;
-  width: 250px; /* Justera bredden här om nödvändigt */
-}
-
-.container .controls .region-select:focus {
-  border-color: var(--select-focus-border);
-  outline: none;
-}
-
 .container {
   display: flex;
   flex-direction: column;
@@ -60,7 +24,44 @@
   width: 100%;
   max-width: 1200px;
   justify-content: space-between;
-/* Lägg till detta för att centrera kontrollerna */
+}
+
+.search-input {
+  background-color: var(--input-bg);
+  border: 1px solid var(--input-border);
+  color: var(--input-text);
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+  width: 40%; /* Anpassa bredden här */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-right: auto;
+}
+
+.search-input::placeholder {
+  color: var(--input-placeholder);
+}
+
+.search-input:focus {
+  border-color: var(--input-focus-border);
+  outline: none;
+}
+
+.region-select {
+  background-color: var(--select-bg);
+  border: 1px solid var(--select-border);
+  color: var(--select-text);
+  border-radius: 4px;
+  padding: 10px;
+  font-size: 16px;
+  transition: border-color 0.2s;
+  width: 250px; /* Justera bredden här om nödvändigt */
+}
+
+.region-select:focus {
+  border-color: var(--select-focus-border);
+  outline: none;
 }
 
 .countries-grid {
@@ -79,6 +80,7 @@
   overflow: hidden;
   text-align: center;
   padding: 20px;
+  cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }
 
