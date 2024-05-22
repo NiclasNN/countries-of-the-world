@@ -17,29 +17,38 @@
 
 .countries-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ändra minsta bredd på korten */
+  gap: 15px; /* Minska mellanrummet mellan korten */
 }
 
 .country-card {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
-  text-decoration: none; /* Remove underline from links */
-  color: inherit; /* Inherit text color */
+  padding: 10px; /* Minska padding i korten */
+  transition: transform 0.2s ease-in-out;
 }
 
 .country-card img {
   width: 100%;
   height: auto;
+  aspect-ratio: 4 / 3; /* Behåll förhållandet */
+  object-fit: cover; /* Gör att bilden täcker hela utrymmet utan att förvrängas */
 }
 
 .country-card h3 {
   margin: 10px 0;
+  font-size: 1rem; /* Minska fontstorlek */
 }
 
 .country-card p {
   margin: 5px 0;
+  font-size: 0.875rem; /* Minska fontstorlek */
+}
+
+.country-card:hover {
+  transform: translateY(-10px);
 }
