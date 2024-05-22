@@ -1,8 +1,9 @@
 :root {
   --background-color: #ffffff;
-  --text-color: #000000;
-  --element-background-color: #f0f0f0;
+  --text-color: #111517;
+  --element-background-color: #f2f2f2;
   --border-color: #dcdcdc;
+  --box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
 }
 
 [data-theme="dark"] {
@@ -10,63 +11,81 @@
   --text-color: #ffffff;
   --element-background-color: #2b3945;
   --border-color: #3b4c5a;
+  --box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
 }
 
 body {
   background-color: var(--background-color);
   color: var(--text-color);
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 .country-detail-container {
-  padding: 20px;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .back-button {
   display: inline-block;
   margin-bottom: 20px;
+  margin-right: auto;
   color: var(--text-color);
   text-decoration: none;
   background-color: var(--element-background-color);
   padding: 10px 20px;
   border-radius: 5px;
   border: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
 }
 
 .country-detail {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
+  padding: 40px;
+  border-radius: 10px;
+  width: 100%;
+   /* Adjusting max-width for better layout */
 }
 
 .country-flag {
   width: 100%;
-  max-width: 500px;
+  max-width: 600px;
   height: auto;
   border-radius: 10px;
   border: 1px solid var(--border-color);
+  margin-right: 20px; /* Adjusted margin */
 }
 
 .country-info {
-  width: 100%;
-  max-width: 800px;
-  margin-top: 20px;
-  padding: 20px;
-  background-color: var(--element-background-color);
-  border-radius: 10px;
-  border: 1px solid var(--border-color);
+  flex: 1;
+  max-width: 400px; /* Adjusting max-width for better layout */
 }
 
 .country-info h1 {
   margin-top: 0;
+  font-size: 2em;
 }
 
 .country-info-grid {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .country-info-grid div {
   flex: 1;
+  min-width: 180px;
+  margin: 10px;
+}
+
+.country-info-grid p {
+  margin: 5px 0;
 }
 
 .border-countries {
@@ -80,4 +99,7 @@ body {
   background-color: var(--element-background-color);
   border-radius: 5px;
   border: 1px solid var(--border-color);
+  box-shadow: var(--box-shadow);
+  color: var(--text-color);
+  margin-bottom: 5px;
 }

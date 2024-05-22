@@ -14,17 +14,13 @@ const CountryDetail = () => {
       setError(null);
 
       try {
-        console.log(`Fetching details for country code: ${code}`);
         const response = await fetch(`https://restcountries.com/v3.1/alpha/${code}`);
-        console.log('Response status:', response.status);
         if (!response.ok) {
           throw new Error(`Network response was not ok: ${response.statusText}`);
         }
         const data = await response.json();
-        console.log('Country data fetched:', data);
         setCountry(data[0]);
       } catch (error) {
-        console.error('Error fetching country:', error);
         setError(error);
       } finally {
         setLoading(false);
@@ -46,7 +42,6 @@ const CountryDetail = () => {
     return <div className="error">No country found.</div>;
   }
 
-  // Extract native name
   const nativeName = country.name.nativeName ? Object.values(country.name.nativeName).map(n => n.common).join(', ') : 'N/A';
 
   return (
@@ -61,9 +56,9 @@ const CountryDetail = () => {
               <p><strong>Population:</strong> {country.population.toLocaleString()}</p>
               <p><strong>Region:</strong> {country.region}</p>
               <p><strong>Capital:</strong> {country.capital ? country.capital[0] : 'N/A'}</p>
+              <p><strong>Native name:</strong> {nativeName}</p>
             </div>
             <div>
-              <p><strong>Native Name:</strong> {nativeName}</p>
               <p><strong>Top Level Domain:</strong> {country.tld.join(', ')}</p>
               <p><strong>Currencies:</strong> {Object.values(country.currencies).map(currency => currency.name).join(', ')}</p>
               <p><strong>Languages:</strong> {Object.values(country.languages).join(', ')}</p>
