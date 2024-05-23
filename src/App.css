@@ -88,7 +88,7 @@ body.dark-mode {
 .countries-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 85px;
+  gap: 45px;
   width: 100%;
   max-width: 1200px;
 }

@@ -1,28 +1,32 @@
 .country-card {
-    background-color: var(--card-bg);
-    color: var(--text-color);
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-    text-align: center;
-    padding: 20px;
-    transition: transform 0.2s ease-in-out;
-  }
-  
-  .country-card img {
-    width: 100%;
-    height: auto;
-  }
-  
-  .country-card h3 {
-    margin: 10px 0;
-  }
-  
-  .country-card p {
-    margin: 5px 0;
-  }
-  
-  .country-card:hover {
-    transform: translateY(-10px);
-  }
-  
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+  padding: 1px;
+  transition: transform 0.2s ease-in-out;
+  width: 100%; /* Anpassar kortets bredd till kolumnens bredd */
+}
+
+.country-card img {
+  width: 70%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.country-card h3 {
+  margin: 10px 0;
+  font-size: 1rem;
+}
+
+.country-card p {
+  margin: 5px 0;
+  font-size: 0.875rem;
+}
+
+.country-card:hover {
+  transform: translateY(-10px);
+}

@@ -17,8 +17,10 @@
 
 .countries-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); /* Ändra minsta bredd på korten */
-  gap: 15px; /* Minska mellanrummet mellan korten */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 48px;
+    width: 85%;
+    max-width: 1016px;
 }
 
 .country-card {
