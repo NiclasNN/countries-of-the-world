@@ -45,8 +45,8 @@ const Container = () => {
           onChange={handleSearchChange}
           className="search-input"
         />
-        <select onChange={handleRegionChange} value={region} className="region-select">
-          <option value="all">Filter by region</option>
+         <select onChange={handleRegionChange} value={region} className="region-select">
+          <option value="all" disabled hidden>Filter by region</option>
           <option value="africa">Africa</option>
           <option value="america">America</option>
           <option value="asia">Asia</option>

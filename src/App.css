@@ -25,6 +25,7 @@ body {
   background-color: #F2F2F2;
   color: #333;
   transition: background-color 0.3s, color 0.3s;
+  outline: none;
 }
 
 body.dark-mode {
@@ -100,7 +101,6 @@ body.dark-mode {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   text-align: center;
-  padding: 20px;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
 }

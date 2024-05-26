@@ -7,6 +7,7 @@
   text-align: center;
   padding: 1px;
   transition: transform 0.2s ease-in-out;
+  text-decoration: none;
   width: 100%; /* Anpassar kortets bredd till kolumnens bredd */
 }
 
@@ -30,3 +31,5 @@
 .country-card:hover {
   transform: translateY(-10px);
 }
+
+
