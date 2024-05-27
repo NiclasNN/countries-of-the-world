@@ -25,11 +25,9 @@
 
 .country-card {
   background-color: var(--card-bg);
-  color: var(--text-color);
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  text-align: center;
   padding: 10px; /* Minska padding i korten */
   transition: transform 0.2s ease-in-out;
 }

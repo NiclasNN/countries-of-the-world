@@ -23,16 +23,11 @@
   height: 30px;
 }
 
-
-
 /* Dark Mode specifik stil för knappen */
 body.dark-mode .darkmode-button {
- /* Bakgrundsfärg för knappen i mörkt läge */
   color: white; /* Textfärg för knappen i mörkt läge */
   border: none;
 }
-
-
 
 /* Ikon för Dark Mode-knappen */
 body.dark-mode .darkmode-button::before {
@@ -45,3 +40,73 @@ body.dark-mode .darkmode-button::before {
 body.dark-mode .darkmode-button:hover::before {
   content: url('/moon.svg'); /* Behåll samma ikon vid hovring i mörkt läge */
 }
+
+/* Gemensam stil för navbar och container */
+.navbar, .container {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode specifika stilar för navbaren och containern */
+body.dark-mode .navbar {
+  background-color: #2B3945; /* Lite ljusare mörk färg för navbaren */
+  color: white; /* Textfärg för navbaren i mörkt läge */
+}
+
+body.dark-mode .container {
+  background-color: #202C36; /* Mörk färg för containern */
+  color: white; /* Textfärg för containern i mörkt läge */
+}
+
+/* Förbättra läsbarheten för text */
+body.dark-mode .container p, 
+body.dark-mode .container h1, 
+body.dark-mode .container h2, 
+body.dark-mode .container h3, 
+body.dark-mode .container h4, 
+body.dark-mode .container h5, 
+body.dark-mode .container h6 {
+  color: white;
+}
+
+/* Förbättra stilen för korten */
+body.dark-mode .card {
+  background-color: #2B3945;
+  color: white;
+  border: none;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .card:hover {
+  background-color: #3C4F5E; /* Mörkare färg vid hovring */
+  color: white;
+}
+
+/* Justera sökrutan */
+body.dark-mode .search-box {
+  background-color: #2B3945;
+  color: white;
+  border: 1px solid #3C4F5E;
+}
+
+body.dark-mode .search-box::placeholder {
+  color: #CDD6DD;
+}
+
+/* Justera dropdown-menyn */
+body.dark-mode .dropdown-menu {
+  background-color: #2B3945;
+  color: white;
+  border: none;
+}
+
+body.dark-mode .dropdown-item:hover {
+  background-color: #3C4F5E;
+  color: white;
+}
+
+/* Justera textfärgen i navbaren */
+body.dark-mode .navbar a {
+  color: white;
+}
+
+

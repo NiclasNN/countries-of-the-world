@@ -57,19 +57,19 @@ const CountryDetail = () => {
             <h1>{country.name.common}</h1>
             <div className="country-info-grid">
               <div>
-                <p><strong>Population:</strong> {country.population.toLocaleString()}</p>
-                <p><strong>Region:</strong> {country.region}</p>
-                <p><strong>Capital:</strong> {country.capital ? country.capital[0] : 'N/A'}</p>
-                <p><strong>Native name:</strong> {country.name.nativeName ? Object.values(country.name.nativeName).map(n => n.common).join(', ') : 'N/A'}</p>
+                <p><span className="label">Population:</span> {country.population.toLocaleString()}</p>
+                <p><span className="label">Region:</span> {country.region}</p>
+                <p><span className="label">Capital:</span> {country.capital ? country.capital[0] : 'N/A'}</p>
+                <p><span className="label">Native name:</span> {country.name.nativeName ? Object.values(country.name.nativeName).map(n => n.common).join(', ') : 'N/A'}</p>
               </div>
               <div>
-                <p><strong>Top Level Domain:</strong> {country.tld.join(', ')}</p>
-                <p><strong>Currencies:</strong> {Object.values(country.currencies).map(currency => currency.name).join(', ')}</p>
-                <p><strong>Languages:</strong> {Object.values(country.languages).join(', ')}</p>
+                <p><span className="label">Top Level Domain:</span> {country.tld.join(', ')}</p>
+                <p><span className="label">Currencies:</span> {Object.values(country.currencies).map(currency => currency.name).join(', ')}</p>
+                <p><span className="label">Languages:</span> {Object.values(country.languages).join(', ')}</p>
               </div>
             </div>
             <div className="border-countries">
-              <p><strong>Border Countries:</strong></p>
+              <p><span className="label">Border Countries:</span></p>
               {borderCountries.length > 0 ? (
                 borderCountries.map((borderCountry, index) => (
                   <span key={index} className="border-country">{borderCountry}</span>

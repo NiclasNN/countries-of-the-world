@@ -45,7 +45,7 @@ const Container = () => {
           onChange={handleSearchChange}
           className="search-input"
         />
-         <select onChange={handleRegionChange} value={region} className="region-select">
+        <select onChange={handleRegionChange} value={region} className="region-select">
           <option value="all" disabled hidden>Filter by region</option>
           <option value="africa">Africa</option>
           <option value="america">America</option>
@@ -62,9 +62,9 @@ const Container = () => {
             <Link key={country.cca3} to={`/country/${country.cca3}`} className="country-card">
               <img src={country.flags.svg} alt={`${country.name.common} flag`} />
               <h3>{country.name.common}</h3>
-              <p><strong>Population:</strong> {country.population.toLocaleString()}</p>
-              <p><strong>Region:</strong> {country.region}</p>
-              <p><strong>Capital:</strong> {country.capital ? country.capital[0] : 'N/A'}</p>
+              <p><span className="label">Population:</span> {country.population.toLocaleString()}</p>
+              <p><span className="label">Region:</span> {country.region}</p>
+              <p><span className="label">Capital:</span> {country.capital ? country.capital[0] : 'N/A'}</p>
             </Link>
           ))}
         </div>
