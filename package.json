@@ -17,6 +17,8 @@
     "react-router-dom": "^6.23.1"
   },
   "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.24.6",
+    "@babel/plugin-syntax-decorators": "^7.24.6",
     "@types/react": "^18.2.66",
     "@types/react-dom": "^18.2.22",
     "@vitejs/plugin-react": "^4.2.1",

@@ -110,3 +110,30 @@ body.dark-mode .navbar a {
 }
 
 
+@media (max-width: 375px) and (max-height: 667px) {
+  .navbar-logo {
+    display: none !important;
+  }
+}
+
+@media (max-width: 375px) and (max-height: 667px) {
+  .dark-mode .navbar {
+    display: none !important;
+    visibility: hidden;
+  }
+}
+
+@media (max-width: 375px) and (max-height: 667px) {
+  body.dark-mode .navbar-logo{
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
+
+
+@media (max-width: 375px) and (max-height: 667px) {
+  .img.navbar-logo{
+    display: none !important;
+    visibility: hidden !important;
+  }
+}
