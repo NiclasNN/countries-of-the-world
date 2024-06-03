@@ -50,6 +50,7 @@ body {
   padding: 40px;
   border-radius: 10px;
   width: 100%;
+  box-sizing: border-box; /* Ensures padding is included in total width */
 }
 
 .country-flag {
@@ -59,11 +60,13 @@ body {
   border-radius: 10px;
   border: 1px solid var(--border-color);
   margin-right: 20px;
+  box-sizing: border-box; /* Ensures padding is included in total width */
 }
 
 .country-info {
   flex: 1;
   max-width: 600px;
+  box-sizing: border-box; /* Ensures padding is included in total width */
 }
 
 .country-info h1 {
@@ -82,10 +85,12 @@ body {
   flex: 1;
   min-width: 180px;
   margin: 10px;
+  box-sizing: border-box; /* Ensures padding is included in total width */
 }
 
 .country-info-grid p {
   margin: 5px 0;
+  
 }
 
 .border-countries {
@@ -110,19 +115,43 @@ span.label {
 }
 
 /* Media Queries for Smaller Screens */
-@media (max-width: 700px) {
+@media (max-width: 700px)   { 
   .country-detail-container {
     padding: 20px;
+  }
+
+
+  span.label {
+    font-weight: 600;
+    font-size: small;
+  }
+
+
+  .border-countries {
+    margin-top: -14px;
+    margin-left: 10px;
+
+  }
+
+  .country-info h1 {
+    font-size: 24px;
+    margin-bottom: -2px;
   }
 
   .country-detail {
     flex-direction: column;
     align-items: center;
-    padding: 20px;
+    padding: 0;
+  }
+
+  .country-info-grid p {
+    margin: 5px 0;
+    font-size: small;
+    
   }
 
   .country-flag {
-    max-width: 100%;
+    max-width: 90%;
     margin-right: 0;
     margin-bottom: 20px;
   }
@@ -144,7 +173,16 @@ span.label {
     padding: 0;
     box-shadow: none;
   }
+
+  /* Ensure content fits within the viewport */
+  .country-detail {
+    overflow: hidden; /* Hide overflow to prevent scrolling */
+  }
 }
+
+
+
+
 
 /* Media Queries for iPad and similar screens (between 701px and 1023px) */
 @media (min-width: 701px) and (max-width: 1023px) {
@@ -196,5 +234,10 @@ span.label {
     margin-right: 0;
     width: 100%;
     text-align: center;
+  }
+
+  /* Ensure content fits within the viewport */
+  .country-detail {
+    overflow: hidden; /* Hide overflow to prevent scrolling */
   }
 }

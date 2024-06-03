@@ -41,7 +41,7 @@ body.dark-mode {
 .controls {
   display: flex;
   gap: 35px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   width: 100%;
   max-width: 1200px;
   justify-content: space-between;
