@@ -3,16 +3,19 @@ import axios from 'axios';
 import { Link } from 'react-router-dom';
 import './Container.css';
 
+const regionMap = {
+  Americas: 'America',
+};
+
 const Container = () => {
   const [countries, setCountries] = useState([]);
   const [searchTerm, setSearchTerm] = useState('');
-  const [region, setRegion] = useState('all');
+  const [region, setRegion] = useState('');
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     setLoading(true);
-    const url = region === 'all' ? 'https://restcountries.com/v3.1/all' : `https://restcountries.com/v3.1/region/${region}`;
-    axios.get(url)
+    axios.get('https://restcountries.com/v3.1/all')
       .then(response => {
         setCountries(response.data);
         setLoading(false);
@@ -21,17 +24,20 @@ const Container = () => {
         console.error("There was an error fetching the countries!", error);
         setLoading(false);
       });
-  }, [region]);
+  }, []);
 
   const handleSearchChange = (event) => {
     setSearchTerm(event.target.value);
   };
 
   const handleRegionChange = (event) => {
-    setRegion(event.target.value);
+    const selectedRegion = event.target.value;
+    const newRegion = selectedRegion === 'All' ? '' : (selectedRegion === 'America' ? 'Americas' : selectedRegion);
+    setRegion(newRegion);
+    localStorage.setItem('selectedRegion', newRegion);
   };
-
-  const filteredCountries = countries.filter(country =>
+  const filteredCountries = countries.filter(country => 
+    (region === '' || country.region.toLowerCase() === region.toLowerCase()) &&
     country.name.common.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
@@ -45,13 +51,14 @@ const Container = () => {
           onChange={handleSearchChange}
           className="search-input"
         />
-        <select onChange={handleRegionChange} value={region} className="region-select">
-          <option value="all" disabled hidden>Filter by region</option>
-          <option value="africa">Africa</option>
-          <option value="america">America</option>
-          <option value="asia">Asia</option>
-          <option value="europe">Europe</option>
-          <option value="oceania">Oceania</option>
+        <select onChange={handleRegionChange} className="region-select" defaultValue="Filter by Region">
+        <option value="Filter by Region" hidden>Filter by Region</option>
+          <option value="All">All</option>
+          <option value="Africa">Africa</option>
+          <option value="America">America</option> {/* Displayed as "America" */}
+          <option value="Asia">Asia</option>
+          <option value="Europe">Europe</option>
+          <option value="Oceania">Oceania</option>
         </select>
       </div>
       {loading ? (

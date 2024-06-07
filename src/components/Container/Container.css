@@ -15,10 +15,26 @@
   margin-right: 10px;
 }
 
+
+.region-select option {
+  background-color: #FFF; /* Bakgrundsfärg */
+  color: #333; /* Textfärg */
+  font-size: 16px; /* Textstorlek */
+}
+
+/* Anpassa scrollbar-stilen */
+.region-select::-webkit-scrollbar {
+  width: 8px; /* Bredd på scrollbar */
+}
+
+.region-select::-webkit-scrollbar-thumb {
+  background-color: #888; /* Färg på scrollbar-greppet */
+  border-radius: 4px; /* Border-radie på scrollbar-greppet */
+}
 .countries-grid {
   display: grid;
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 48px;
+    gap: 65px;
     width: 85%;
     max-width: 1016px;
 }
@@ -28,25 +44,25 @@
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-  padding: 10px; /* Minska padding i korten */
+  padding: 10px; 
   transition: transform 0.2s ease-in-out;
 }
 
 .country-card img {
   width: 100%;
   height: auto;
-  aspect-ratio: 4 / 3; /* Behåll förhållandet */
-  object-fit: cover; /* Gör att bilden täcker hela utrymmet utan att förvrängas */
+  aspect-ratio: 4 / 3; 
+  object-fit: cover; 
 }
 
 .country-card h3 {
   margin: 10px 0;
-  font-size: 1rem; /* Minska fontstorlek */
+  font-size: 1rem; 
 }
 
 .country-card p {
   margin: 5px 0;
-  font-size: 0.875rem; /* Minska fontstorlek */
+  font-size: 0.875rem; 
 }
 
 .country-card:hover {

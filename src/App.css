@@ -77,6 +77,7 @@ body.dark-mode {
   font-size: 16px;
   transition: border-color 0.2s;
   width: 250px;
+  margin-right: 3px;
 }
 
 .region-select:focus {

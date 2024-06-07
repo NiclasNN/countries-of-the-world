@@ -230,7 +230,7 @@ span.label {
   .country-info-grid div {
     width: 83%;
     max-width: 300px;
-    margin: 15px 10px;
+    margin: 4px 8px;
   }
 
   .country-flag {
@@ -255,7 +255,7 @@ span.label {
 /* Media Queries for iPad and similar screens (between 701px and 1023px) */
 @media (min-width: 700px) and (max-width: 1023px) {
   .country-detail-container {
-    padding: 30px;
+    padding: 19px;
   }
 
   .country-detail {
@@ -294,8 +294,7 @@ span.label {
     margin: 5px;
   }
 
-  .back-button {
-  }
+
 
   /* Ensure content fits within the viewport */
   .country-detail {
@@ -346,8 +345,7 @@ span.label {
     margin: 5px;
   }
 
-  .back-button {
-  }
+  
 
   /* Ensure content fits within the viewport */
   .country-detail {
@@ -358,7 +356,7 @@ span.label {
 /* Media Queries for larger screens */
 @media (min-width: 1024px) {
   .country-detail-container {
-    padding: 40px;
+    padding: 41px;
   }
 
   .country-detail {
@@ -444,7 +442,7 @@ span.label {
   .country-info-grid div {
     width: 83%;
     max-width: 300px;
-    margin: -1px 10px;
+    margin: -10px 10px
   }
 
   .country-flag {
@@ -457,4 +455,63 @@ span.label {
     max-width: 100%;
     align-items: center;
   }
+}
+
+@media (min-height: 600px ) and (max-height: 601px){
+
+
+
+.country-detail-container{
+
+padding:31px;
+
+}
+
+
+.country-detail {
+
+padding:6px;
+
+}
+
+.country-flag{
+  max-width: 437px;
+  margin-right: 27px;
+  margin-bottom: 0;
+  margin-left: 30px
+}
+
+}
+
+
+
+@media (min-height: 720px ) and (max-height: 721px){
+
+
+  .country-detail-container {
+    padding: 20px;
+}
+
+
+.country-flag {
+  max-width: 75%;
+  margin-right: 114px;
+  margin-bottom: 13px;
+}
+
+
+
+.country-info-grid {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+
+
+.border-countries {
+  margin-top: 20px;
+  margin-left: 0px;
+}
 }
