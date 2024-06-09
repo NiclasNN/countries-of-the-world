@@ -1,5 +1,5 @@
 .container {
-  padding: 20px;
+  padding: 30px;
 }
 
 .controls {
@@ -16,28 +16,9 @@
 }
 
 
-.region-select option {
-  background-color: #FFF; /* Bakgrundsfärg */
-  color: #333; /* Textfärg */
-  font-size: 16px; /* Textstorlek */
-}
 
-/* Anpassa scrollbar-stilen */
-.region-select::-webkit-scrollbar {
-  width: 8px; /* Bredd på scrollbar */
-}
 
-.region-select::-webkit-scrollbar-thumb {
-  background-color: #888; /* Färg på scrollbar-greppet */
-  border-radius: 4px; /* Border-radie på scrollbar-greppet */
-}
-.countries-grid {
-  display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-    gap: 65px;
-    width: 85%;
-    max-width: 1016px;
-}
+
 
 .country-card {
   background-color: var(--card-bg);

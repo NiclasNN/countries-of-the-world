@@ -10,6 +10,8 @@
   border-radius: 5px;
   display: flex;
   align-items: center;
+  font-weight: 600;
+  font-family: 'Open Sans';
 }
 
 .darkmode-button i {
@@ -21,6 +23,7 @@
   content: url('/moon-bordered.svg');
   width: 24px;
   height: 30px;
+  margin-right: 7px;
 }
 
 /* Dark Mode specifik stil för knappen */

@@ -35,13 +35,14 @@ body.dark-mode {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 30px;
+
 }
 
 .controls {
   display: flex;
   gap: 35px;
-  margin-bottom: 30px;
+  margin-bottom: 35px;
   width: 100%;
   max-width: 1200px;
   justify-content: space-between;
@@ -57,6 +58,7 @@ body.dark-mode {
   transition: border-color 0.2s;
   width: 40%;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Open Sans';
 }
 
 .search-input::placeholder {
@@ -78,18 +80,21 @@ body.dark-mode {
   transition: border-color 0.2s;
   width: 250px;
   margin-right: 3px;
+  font-family: 'Open Sans';
+    font-weight: 600;
 }
 
 .region-select:focus {
   border-color: var(--select-focus-border);
   outline: none;
   width: 250px;
+  
 }
 
 .countries-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 45px;
+  gap: 62px;
   width: 100%;
   max-width: 1200px;
 }
@@ -106,6 +111,7 @@ body.dark-mode {
   text-align: left;
   display: flex;
   flex-direction: column;
+  padding-bottom: 20px; 
 }
 
 body.dark-mode .country-card {
@@ -120,16 +126,19 @@ body.dark-mode .country-card {
 
 .country-card h3 {
   font-weight: 600;
-  margin: 10px 4px 5px;
-  color: var(--text-color);
+    font-family: 'Open Sans';
+    margin: 14px 21px 5px;
+    color: var(--text-color);
 }
 
 .country-card p {
-  margin: 5px 4px;
+  margin: 5px 18px;
+  font-size: smaller;
+    font-family: sans-serif;
 }
 
 .country-card p span {
-  font-weight: 600;
+  font-weight: 400;
   margin: 5px 4px;
   color: var(--text-color);
 }

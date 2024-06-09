@@ -6,8 +6,8 @@
   overflow: hidden;
   cursor: pointer;
   transition: transform 0.2s ease-in-out;
-  padding: 15px; /* Lägg till padding för bättre layout */
-  text-decoration: none; /* Ta bort understrykning av länkar */
+  padding: 15px; 
+  text-decoration: none; 
 }
 
 .country-card img {
@@ -33,5 +33,5 @@ body.dark-mode .country-card {
 }
 
 body.dark-mode .country-card a {
-  text-decoration: none; /* Ta bort understrykning av länkar i dark mode */
+  text-decoration: none; 
 }

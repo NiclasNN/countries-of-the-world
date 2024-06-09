@@ -39,8 +39,10 @@ body {
   background-color: var(--element-background-color);
   padding: 10px 20px;
   border-radius: 5px;
-  border: 1px solid var(--border-color);
-  box-shadow: var(--box-shadow);
+  font-family: 'Open Sans';
+  font-weight: 600;
+  
+  
 }
 
 .country-detail {
@@ -50,23 +52,24 @@ body {
   padding: 40px;
   border-radius: 10px;
   width: 100%;
-  box-sizing: border-box; /* Ensures padding is included in total width */
+  box-sizing: border-box; 
 }
 
 .country-flag {
-  width: 100%;
-  max-width: 600px;
+  width: 90%;
+  max-width: 300px;
   height: auto;
   border-radius: 10px;
   border: 1px solid var(--border-color);
   margin-right: 20px;
-  box-sizing: border-box; /* Ensures padding is included in total width */
+  box-sizing: border-box; 
+  object-fit: cover; /* Se till att bilden alltid täcker hela området */
 }
 
 .country-info {
   flex: 1;
   max-width: 600px;
-  box-sizing: border-box; /* Ensures padding is included in total width */
+  box-sizing: border-box; 
 }
 
 .country-info h1 {
@@ -85,7 +88,7 @@ body {
   flex: 1;
   min-width: 180px;
   margin: 10px;
-  box-sizing: border-box; /* Ensures padding is included in total width */
+  box-sizing: border-box; 
 }
 
 .country-info-grid p {
@@ -179,9 +182,9 @@ span.label {
     box-shadow: none;
   }
 
-  /* Ensure content fits within the viewport */
+
   .country-detail {
-    overflow: hidden; /* Hide overflow to prevent scrolling */
+    overflow: hidden; 
   }
 }
 
@@ -235,7 +238,7 @@ span.label {
 
   .country-flag {
     max-width: 90%;
-    margin-right: 0;
+    margin-right: auto;
     margin-bottom: 20px;
   }
 
@@ -252,7 +255,7 @@ span.label {
   }
 }
 
-/* Media Queries for iPad and similar screens (between 701px and 1023px) */
+
 @media (min-width: 700px) and (max-width: 1023px) {
   .country-detail-container {
     padding: 19px;
@@ -347,16 +350,16 @@ span.label {
 
   
 
-  /* Ensure content fits within the viewport */
+  
   .country-detail {
-    overflow: hidden; /* Hide overflow to prevent scrolling */
+    overflow: hidden; 
   }
 }
 
-/* Media Queries for larger screens */
+
 @media (min-width: 1024px) {
   .country-detail-container {
-    padding: 41px;
+    padding: 38px;
   }
 
   .country-detail {
@@ -489,7 +492,7 @@ padding:6px;
 
 
   .country-detail-container {
-    padding: 20px;
+    padding: 0px;
 }
 
 
@@ -511,7 +514,7 @@ padding:6px;
 
 
 .border-countries {
-  margin-top: 20px;
+  margin-top: -16px;
   margin-left: 0px;
 }
 }
