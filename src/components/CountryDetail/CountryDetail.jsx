@@ -47,7 +47,7 @@ const CountryDetail = () => {
 
   return (
     <div className="country-detail-container">
-      <Link to="/" className="back-button">← Back</Link>
+      <Link to="/" className="back-button"><p>← Back</p></Link>
       {loading && <div className="loading">Loading...</div>}
       {error && <div className="error">Error loading country details. Please try again later.</div>}
       {country && (

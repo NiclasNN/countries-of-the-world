@@ -34,16 +34,17 @@ body {
   display: inline-block;
   margin-bottom: 20px;
   margin-right: auto;
-  color: var(--text-color);
-  text-decoration: none;
-  background-color: var(--element-background-color);
-  padding: 10px 20px;
+  padding: 20px 20px;
   border-radius: 5px;
   font-family: 'Open Sans';
   font-weight: 600;
   
   
 }
+
+
+
+
 
 .country-detail {
   display: flex;
@@ -119,7 +120,7 @@ span.label {
 /* Media Queries for Smaller Screens */
 @media (max-width: 378px) and (max-height: 668px) { 
   .country-detail-container {
-    padding: 20px;
+    padding: 10px;
   }
 
   span.label {
@@ -159,9 +160,9 @@ span.label {
   }
 
   .country-flag {
-    max-width: 90%;
-    margin-right: 0;
-    margin-bottom: 20px;
+    max-width: 82%;
+        margin-left: -29px;
+        margin-bottom: 8px;
   }
 
   .country-info {
@@ -175,12 +176,24 @@ span.label {
     margin: 10px 10px;
   }
 
-  .back-button {
-    border: none;
-    text-align: center;
-    padding: 0;
-    box-shadow: none;
+  .back-button p {
+    display: inline-block;
+    margin-bottom: 27px;
+    margin-right: auto;
+    padding: 11px 0px;
+    border-radius: 5px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    margin-top: -23px;
+    margin-left: -13px;
+    padding-top: 0px;
+
   }
+
+  
+  /* padding: 10px 20px; */
+  
+
 
 
   .country-detail {
@@ -190,12 +203,12 @@ span.label {
 
 @media (max-width: 431px) and (min-height: 700px) {
   .country-detail-container {
-    padding: 20px;
+    padding: 1px;
   }
 
   span.label {
     font-weight: 600;
-    font-size: large;
+    font-size: medium;
   }
 
   .border-countries {
@@ -227,7 +240,7 @@ span.label {
 
   .country-info-grid p {
     margin: 16px 0;
-    font-size: large;
+    font-size: medium;
   }
 
   .country-info-grid div {
@@ -359,7 +372,7 @@ span.label {
 
 @media (min-width: 1024px) {
   .country-detail-container {
-    padding: 38px;
+    padding: 20px;
   }
 
   .country-detail {
@@ -370,7 +383,7 @@ span.label {
   }
 
   .country-flag {
-    max-width: 600px;
+    max-width: 438px;
     margin-right: 20px;
     margin-bottom: 0;
   }
@@ -402,7 +415,7 @@ span.label {
 
 @media (min-width: 360px) and (max-width: 361px) {
   .country-detail-container {
-    padding: 20px;
+    padding: 1px;
   }
 
   span.label {
@@ -517,4 +530,85 @@ padding:6px;
   margin-top: -16px;
   margin-left: 0px;
 }
+}
+
+
+.back-button {
+display: inline-block;
+    margin-bottom: -22px;
+    margin-right: auto;
+    padding: 20px 20px;
+    border-radius: 5px;
+    font-family: 'Open Sans';
+    font-weight: 600;
+    margin-top: 0;
+}
+
+@media (min-width: 431px ) and (max-width: 539px){
+
+
+  .country-detail-container {
+    padding: 20px;
+  }
+
+  span.label {
+    font-weight: 600;
+    font-size: large;
+  }
+
+  .border-countries {
+    margin-top: -14px;
+    margin-left: 10px;
+  }
+
+  .border-country {
+    padding: 5px;
+    font-size: 13px;
+  }
+
+  .border-countries p {
+    margin-bottom: 3px;
+    margin-left: 1px;
+  }
+
+  .country-info h1 {
+    font-size: 24px;
+    margin-bottom: -2px;
+  }
+
+  .country-detail {
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 83%;
+  }
+
+  .country-info-grid p {
+    margin: 16px 0;
+    font-size: large;
+  }
+
+  .country-info-grid div {
+    width: 83%;
+    max-width: 300px;
+    margin: 4px 8px;
+  }
+
+  .country-flag {
+    max-width: 90%;
+    margin-right: auto;
+    margin-bottom: 20px;
+  }
+
+  .country-info {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .back-button {
+    border: none;
+    text-align: center;
+    padding: 20px;
+    box-shadow: none;
+  }
 }

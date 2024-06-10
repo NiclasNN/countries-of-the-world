@@ -93,7 +93,7 @@ body.dark-mode {
 
 .countries-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   gap: 62px;
   width: 100%;
   max-width: 1200px;
@@ -190,7 +190,7 @@ a {
 @media (max-width: 768px) {
   .controls {
     flex-direction: column;
-    align-items: center;
+    
   }
 
   .search-input {
@@ -199,7 +199,7 @@ a {
   }
 
   .countries-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 35px;
   }
 
