@@ -1,0 +1,2 @@
+- [Github repository](https://github.com/NiclasNN/countries-of-the-world)
+- [Deployat projekt](https://countries-the-world.netlify.app/)

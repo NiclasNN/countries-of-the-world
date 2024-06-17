@@ -36,9 +36,14 @@ const Container = () => {
     setRegion(newRegion);
     localStorage.setItem('selectedRegion', newRegion);
   };
+
   const filteredCountries = countries.filter(country => 
     (region === '' || country.region.toLowerCase() === region.toLowerCase()) &&
     country.name.common.toLowerCase().includes(searchTerm.toLowerCase())
+  );
+
+  const sortedCountries = filteredCountries.sort((a, b) => 
+    a.name.common.localeCompare(b.name.common)
   );
 
   return (
@@ -52,7 +57,7 @@ const Container = () => {
           className="search-input"
         />
         <select onChange={handleRegionChange} className="region-select" defaultValue="Filter by Region">
-        <option value="Filter by Region" hidden>Filter by Region</option>
+          <option value="Filter by Region" hidden>Filter by Region</option>
           <option value="All">All</option>
           <option value="Africa">Africa</option>
           <option value="America">America</option> {/* Displayed as "America" */}
@@ -65,7 +70,7 @@ const Container = () => {
         <p>Loading...</p>
       ) : (
         <div className="countries-grid">
-          {filteredCountries.map(country => (
+          {sortedCountries.map(country => (
             <Link key={country.cca3} to={`/country/${country.cca3}`} className="country-card">
               <img src={country.flags.svg} alt={`${country.name.common} flag`} />
               <h3>{country.name.common}</h3>
